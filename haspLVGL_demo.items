@@ -1,0 +1,41 @@
+/* Plate Status Items */
+
+Number HASP_demo_Plate_Backlight_Brightness     "HASP Demo Plate Backlight Brightness [%.0f]"   {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_Backlight_Brightness"}
+
+Switch HASP_demo_Plate_LWT                      "HASP Demo Plate Connection Status [%s]"        {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_LWT"}
+Switch HASP_demo_Plate_Reboot                   "HASP Demo Plate Reboot [%s]"                   {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_Reboot" , expire="5s,state=OFF" }
+String HASP_demo_Plate_Idle                     "HASP Demo Plate Idle State [%s]"               {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_Idle"}
+String HASP_demo_Plate_Status                   "HASP Demo Plate - Status [%s]"                 {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_Status"}
+String HASP_demo_Plate_ESPVersion               "HASP Demo Plate - ESP Version [%s]"            {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_ESPVersion"}
+Number HASP_demo_Plate_ESPUptime                "HASP Demo Plate - ESP Uptime [%d secs]"        {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_ESPUptime"}
+String HASP_demo_Plate_SSID                     "HASP Demo Plate - SSID[%s]"                    {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_SSID"}
+Number HASP_demo_Plate_SignalStrength           "HASP Demo Plate - Signal Strength [%d dbm]"    {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_SignalStrength"}
+String HASP_demo_Plate_HaspIP                   "HASP Demo Plate - HASP IP [%s]"                {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_HaspIP"}
+Number HASP_demo_Plate_HeapFree                 "HASP Demo Plate - Heap Free [%d]"              {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_HeapFree"}
+Number HASP_demo_Plate_HeapFrag                 "HASP Demo Plate - Heap Frag [%d]"              {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_HeapFrag"}
+String HASP_demo_Plate_ESPCore                  "HASP Demo Plate - ESP Core [%s]"               {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_ESPCore"}
+String HASP_demo_Plate_ESPUpdate                "HASP Demo Plate - ESP Update Available [%s]"   {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_ESPUpdate"}
+Number HASP_demo_Plate_Page                     "HASP Demo Plate - Page [%d]"                   {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_Page"}
+Number HASP_demo_Plate_NumPages                 "HASP Demo Plate - Total Pages [%d]"            {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_NumPages"}
+String HASP_demo_Plate_TftDriver                "HASP Demo Plate - TFT Driver [%s]"             {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_TftDriver"}
+Number HASP_demo_Plate_TFTWidth                 "HASP Demo Plate - TFT Width [%d]"              {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_TFTWidth"}
+Number HASP_demo_Plate_TFTHeight                "HASP Demo Plate - TFT Height [%d]"             {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_TFTHeight"}
+
+/* Demo page Items */
+Switch HASP_demo_Plate_P0B1                     "HASP Demo Plate P0B1 %s"
+
+/* Plate Command Items */
+Switch HASP_demo_Plate_Refresh                  "HASP Demo Plate Refresh"                       {expire="5s,command=OFF"}
+
+Number HASP_demo_Plate_Page_Current             "HASP Demo Plate - Current Page [%.0f]"         {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_Page_Current"}
+String HASP_demo_Plate_Command                  "Hasp Demo Plate Command [%s]"                  {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_Command"}
+String HASP_demo_Plate_Command_CLEARPAGE        "Hasp Demo Plate CLEARPAGE [%s]"                {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_Command_CLEARPAGE"}
+String HASP_demo_Plate_Command_JSON             "Hasp Demo Plate JSON Command [%s]"             {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_Command_JSON"}
+String HASP_demo_Plate_Command_JSONL            "Hasp Demo Plate JSONL Command [%s]"            {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_Command_JSONL"}
+
+String HASP_demo_Plate_State                    "HASP Demo Plate State [%s]"                    {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_State"}
+String HASP_demo_Plate_State_JSON               "HASP Demo Plate JSON State [%s]"               {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_State_JSON"}
+String HASP_demo_Plate_State_JSON_Value         "HASP Demo Plate JSON State Value [%s]"         {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_State_JSON_Value"}
+Number HASP_demo_Plate_State_JSON_Id            "HASP Demo Plate Object ID [%.0f]"              {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_State_JSON_Id"}
+Number HASP_demo_Plate_State_JSON_Page          "HASP Demo Plate Event Page [%.0f]"             {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_State_JSON_Page"}
+String HASP_demo_Plate_State_JSON_Event         "HASP Demo Plate JSON State Event [%s]"         {channel="mqtt:topic:haspLVGLBroker:haspLVGLDemo:HASP_demo_Plate_State_JSON_Event"}
