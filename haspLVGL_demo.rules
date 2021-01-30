@@ -8,30 +8,30 @@ rule "HASP_DEMO Setup"
         Item HASP_demo_Plate_LWT received update ON
     then
         var object_Array = newArrayList(
-            "page=254;obj=btn;id=1;x=5;y=257;w=73;h=58;bg_color=" + Jaffa_Sunrise.get(4) + ";border_width=0;txt=\\uf053;text_color=" + Jaffa_Sunrise.get(3) + ";text_font=1",
-            "page=254;obj=btn;id=2;x=83;y=257;w=73;h=58;bg_color=" + Jaffa_Sunrise.get(4) + ";border_width=0;txt=\\uf0c9;text_color=" + Jaffa_Sunrise.get(3) + ";text_font=1",
-            "page=254;obj=btn;id=3;x=161;y=257;w=73;h=58;bg_color=" + Jaffa_Sunrise.get(4) + ";border_width=0;txt=\\uf054;text_color=" + Jaffa_Sunrise.get(3) + ";text_font=1",
-            "page=0;obj=btn;id=1;x=5;y=5;w=230;h=58;bg_color=" + Jaffa_Sunrise.get(4) + ";border_color=" + Jaffa_Sunrise.get(0) + ";border_width=2;radius=10;txt=Lights On;value_ofs_x=-85;value_font=1;value_str=\\uf205;value_color=" + Jaffa_Sunrise.get(2) + ";text_color=" + Jaffa_Sunrise.get(2) + ";text_font=28",
-            "page=0;obj=btn;id=2;x=5;y=68;w=230;h=58;bg_color=" + Jaffa_Sunrise.get(4) + ";border_color=" + Jaffa_Sunrise.get(0) + ";border_width=2;radius=10;txt=Daylight;value_ofs_x=-85;value_font=1;value_str=\\uf185;value_color=" + Jaffa_Sunrise.get(2) + ";text_color=" + Jaffa_Sunrise.get(2) + ";text_font=28",
-            "page=0;obj=btn;id=3;x=5;y=131;w=230;h=58;bg_color=" + Jaffa_Sunrise.get(4) + ";border_color=" + Jaffa_Sunrise.get(0) + ";border_width=2;radius=10;txt=Night;value_ofs_x=-85;value_font=1;value_str=\\uf186;value_color=" + Jaffa_Sunrise.get(2) + ";text_color=" + Jaffa_Sunrise.get(2) + ";text_font=28",
-            "page=0;obj=btn;id=4;x=5;y=194;w=230;h=58;bg_color=" + Jaffa_Sunrise.get(4) + ";border_color=" + Jaffa_Sunrise.get(0) + ";border_width=2;radius=10;txt=Lights Off;value_ofs_x=-85;value_font=1;value_str=\\uf204;value_color=" + Jaffa_Sunrise.get(2) + ";text_color=" + Jaffa_Sunrise.get(2) + ";text_font=28",
-            "page=1;obj=label;id=1;x=5;y=5;w=230;h=30;txt=Kitchen Dimmer;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=28",
-            "page=1;obj=label;id=2;x=5;y=80;w=230;h=30;txt=Dining Dimmer;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=28",
-            "page=1;obj=label;id=3;x=5;y=165;w=230;h=30;txt=Front Blinds;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=28",
-            "page=1;obj=slider;id=4;x=20;y=40;w=200;h=30;bg_color=" + Jaffa_Sunrise.get(2) + ";radius=15;radius1=15;radius2=20;text_font=1;val=80;bg_color1=" + Jaffa_Sunrise.get(0) + ";bg_color2=" + Jaffa_Sunrise.get(1),
-            "page=1;obj=slider;id=5;x=20;y=120;w=200;h=30;bg_color=" + Jaffa_Sunrise.get(2) + ";radius=15;radius1=15;radius2=20;text_font=1;val=65;bg_color1=" + Jaffa_Sunrise.get(0) + ";bg_color2=" + Jaffa_Sunrise.get(1),
-            "page=1;obj=slider;id=6;x=20;y=205;w=200;h=30;bg_color=" + Jaffa_Sunrise.get(2) + ";radius=15;radius1=15;radius2=20;text_font=1;val=25;bg_color1=" + Jaffa_Sunrise.get(0) + ";bg_color2=" + Jaffa_Sunrise.get(1),
-            "page=2;obj=label;id=1;x=42;y=10;w=236;h=30;txt=Gold;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=28",
-            "page=2;obj=label;id=2;x=42;y=60;mode=loop;w=236;h=30;txt=Chet Faker;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=28",
-            "page=2;obj=btn;id=3;x=2;y=140;w=76;h=61;bg_color=" + Jaffa_Sunrise.get(4) + ";border_color=" + Jaffa_Sunrise.get(0) + ";border_width=2;radius=10;txt=\\uf048;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=1",
-            "page=2;obj=btn;id=4;x=82;y=140;w=76;h=61;bg_color=" + Jaffa_Sunrise.get(4) + ";border_color=" + Jaffa_Sunrise.get(0) + ";border_width=2;radius=10;txt=\\uf04c;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=1",
-            "page=2;obj=btn;id=5;x=162;y=140;w=76;h=61;bg_color=" + Jaffa_Sunrise.get(4) + ";border_color=" + Jaffa_Sunrise.get(0) + ";border_width=2;radius=10;txt=\\uf051;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=1",
-            "page=2;obj=bar;id=6;x=2;y=105;w=236;h=20;bg_color=" + Jaffa_Sunrise.get(2) + ";radius=15;radius1=15;radius2=15;text_font=1;val=65;bg_color1=" + Jaffa_Sunrise.get(0),
-            "page=2;obj=slider;id=7;x=35;y=220;w=170;h=30;bg_color=" + Jaffa_Sunrise.get(2) + ";radius=15;radius1=15;radius2=20;text_font=1;val=30;bg_color1=" + Jaffa_Sunrise.get(0) + ";bg_color2=" + Jaffa_Sunrise.get(1),
-            "page=2;obj=label;id=8;x=2;y=2;w=40;h=61;txt=\\uf001;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=1",
-            "page=2;obj=label;id=9;x=10;y=51;w=36;h=61;txt=\\uf3e0;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=1",
-            "page=2;obj=label;id=10;x=5;y=224;w=25;h=40;txt=\\uf026;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=22",
-            "page=2;obj=label;id=11;x=210;y=224;w=25;h=40;txt=\\uf028;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=22"
+            "page=0;obj=btn;id=1;x=5;y=257;w=73;h=58;bg_color=" + Jaffa_Sunrise.get(4) + ";border_width=0;txt=\\uf053;text_color=" + Jaffa_Sunrise.get(3) + ";text_font=1",
+            "page=0;obj=btn;id=2;x=83;y=257;w=73;h=58;bg_color=" + Jaffa_Sunrise.get(4) + ";border_width=0;txt=\\uf0c9;text_color=" + Jaffa_Sunrise.get(3) + ";text_font=1",
+            "page=0;obj=btn;id=3;x=161;y=257;w=73;h=58;bg_color=" + Jaffa_Sunrise.get(4) + ";border_width=0;txt=\\uf054;text_color=" + Jaffa_Sunrise.get(3) + ";text_font=1",
+            "page=1;obj=btn;id=1;x=5;y=5;w=230;h=58;bg_color=" + Jaffa_Sunrise.get(4) + ";border_color=" + Jaffa_Sunrise.get(0) + ";border_width=2;radius=10;txt=Lights On;value_ofs_x=-85;value_font=1;value_str=\\uf205;value_color=" + Jaffa_Sunrise.get(2) + ";text_color=" + Jaffa_Sunrise.get(2) + ";text_font=28",
+            "page=1;obj=btn;id=2;x=5;y=68;w=230;h=58;bg_color=" + Jaffa_Sunrise.get(4) + ";border_color=" + Jaffa_Sunrise.get(0) + ";border_width=2;radius=10;txt=Daylight;value_ofs_x=-85;value_font=1;value_str=\\uf185;value_color=" + Jaffa_Sunrise.get(2) + ";text_color=" + Jaffa_Sunrise.get(2) + ";text_font=28",
+            "page=1;obj=btn;id=3;x=5;y=131;w=230;h=58;bg_color=" + Jaffa_Sunrise.get(4) + ";border_color=" + Jaffa_Sunrise.get(0) + ";border_width=2;radius=10;txt=Night;value_ofs_x=-85;value_font=1;value_str=\\uf186;value_color=" + Jaffa_Sunrise.get(2) + ";text_color=" + Jaffa_Sunrise.get(2) + ";text_font=28",
+            "page=1;obj=btn;id=4;x=5;y=194;w=230;h=58;bg_color=" + Jaffa_Sunrise.get(4) + ";border_color=" + Jaffa_Sunrise.get(0) + ";border_width=2;radius=10;txt=Lights Off;value_ofs_x=-85;value_font=1;value_str=\\uf204;value_color=" + Jaffa_Sunrise.get(2) + ";text_color=" + Jaffa_Sunrise.get(2) + ";text_font=28",
+            "page=2;obj=label;id=1;x=5;y=5;w=230;h=30;txt=Kitchen Dimmer;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=28",
+            "page=2;obj=label;id=2;x=5;y=80;w=230;h=30;txt=Dining Dimmer;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=28",
+            "page=2;obj=label;id=3;x=5;y=165;w=230;h=30;txt=Front Blinds;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=28",
+            "page=2;obj=slider;id=4;x=20;y=40;w=200;h=30;bg_color=" + Jaffa_Sunrise.get(2) + ";radius=15;radius1=15;radius2=20;text_font=1;val=80;bg_color1=" + Jaffa_Sunrise.get(0) + ";bg_color2=" + Jaffa_Sunrise.get(1),
+            "page=2;obj=slider;id=5;x=20;y=120;w=200;h=30;bg_color=" + Jaffa_Sunrise.get(2) + ";radius=15;radius1=15;radius2=20;text_font=1;val=65;bg_color1=" + Jaffa_Sunrise.get(0) + ";bg_color2=" + Jaffa_Sunrise.get(1),
+            "page=2;obj=slider;id=6;x=20;y=205;w=200;h=30;bg_color=" + Jaffa_Sunrise.get(2) + ";radius=15;radius1=15;radius2=20;text_font=1;val=25;bg_color1=" + Jaffa_Sunrise.get(0) + ";bg_color2=" + Jaffa_Sunrise.get(1),
+            "page=3;obj=label;id=1;x=42;y=10;w=236;h=30;txt=Gold;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=28",
+            "page=3;obj=label;id=2;x=42;y=60;mode=loop;w=236;h=30;txt=Chet Faker;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=28",
+            "page=3;obj=btn;id=3;x=2;y=140;w=76;h=61;bg_color=" + Jaffa_Sunrise.get(4) + ";border_color=" + Jaffa_Sunrise.get(0) + ";border_width=2;radius=10;txt=\\uf048;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=1",
+            "page=3;obj=btn;id=4;x=82;y=140;w=76;h=61;bg_color=" + Jaffa_Sunrise.get(4) + ";border_color=" + Jaffa_Sunrise.get(0) + ";border_width=2;radius=10;txt=\\uf04c;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=1",
+            "page=3;obj=btn;id=5;x=162;y=140;w=76;h=61;bg_color=" + Jaffa_Sunrise.get(4) + ";border_color=" + Jaffa_Sunrise.get(0) + ";border_width=2;radius=10;txt=\\uf051;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=1",
+            "page=3;obj=bar;id=6;x=2;y=105;w=236;h=20;bg_color=" + Jaffa_Sunrise.get(2) + ";radius=15;radius1=15;radius2=15;text_font=1;val=65;bg_color1=" + Jaffa_Sunrise.get(0),
+            "page=3;obj=slider;id=7;x=35;y=220;w=170;h=30;bg_color=" + Jaffa_Sunrise.get(2) + ";radius=15;radius1=15;radius2=20;text_font=1;val=30;bg_color1=" + Jaffa_Sunrise.get(0) + ";bg_color2=" + Jaffa_Sunrise.get(1),
+            "page=3;obj=label;id=8;x=2;y=2;w=40;h=61;txt=\\uf001;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=1",
+            "page=3;obj=label;id=9;x=10;y=51;w=36;h=61;txt=\\uf3e0;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=1",
+            "page=3;obj=label;id=10;x=5;y=224;w=25;h=40;txt=\\uf026;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=22",
+            "page=3;obj=label;id=11;x=210;y=224;w=25;h=40;txt=\\uf028;text_color=" + Jaffa_Sunrise.get(2) + ";text_font=22"
         )
 
         val Number LimitDeviceJsonl = 1500
@@ -137,7 +137,10 @@ rule "HASP_DEMO CHANNEL TRIGGERED"
             {
                 logInfo("HASP_channel.rules", " Page: {}",  payload)
             }
-
+            case 'input':
+            {
+                logInfo("HASP_channel.rules", " Input: {}",  payload)
+            }
             default:
             {
                 var eventpage = topicvalue.split("b").get(0).split("p").get(1)
@@ -147,7 +150,7 @@ rule "HASP_DEMO CHANNEL TRIGGERED"
 
                 switch(eventpage)
                 {
-                    case '0':
+                    case '1':
                     {
                         switch(eventbutton)
                         {
@@ -157,21 +160,21 @@ rule "HASP_DEMO CHANNEL TRIGGERED"
                                 {
                                     var String stat
                                     var String icon
-                                    if (HASP_demo_Plate_P0B1.state == null || HASP_demo_Plate_P0B1.state == OFF){
-                                        HASP_demo_Plate_P0B1.postUpdate(ON)
+                                    if (HASP_demo_Plate_P1B1.state == null || HASP_demo_Plate_P1B1.state == OFF){
+                                        HASP_demo_Plate_P1B1.postUpdate(ON)
                                         stat = "On"
                                         icon = "\\uf205"
                                     } else {
-                                        HASP_demo_Plate_P0B1.postUpdate(OFF)
+                                        HASP_demo_Plate_P1B1.postUpdate(OFF)
                                         stat = "Off"
                                         icon = "\\uf204"
                                     }
-                                    HASP_demo_Plate_Command_JSON.sendCommand("['p[0].b[1].txt=Lights " + stat + "','p[0].b[1].value_str=" + icon + "']")
+                                    HASP_demo_Plate_Command_JSON.sendCommand("['p[1].b[1].txt=Lights " + stat + "','p[1].b[1].value_str=" + icon + "']")
                                 }
                             }
                         }
                     }
-                    case '254':
+                    case '0':
                     {
                         switch(eventbutton)
                         {
@@ -180,7 +183,11 @@ rule "HASP_DEMO CHANNEL TRIGGERED"
                                 if(jsonkey == "event" && jsonvalue == "SHORT")
                                 {
                                     logInfo("HASP_channel.rules", " Page: {} Button: {} pressed",  eventpage, eventbutton)
-                                    var Number page = HASP_demo_Plate_Page_Current.state as Number
+                                    var Number page = 0
+                                    if (HASP_demo_Plate_Page_Current.state !== NULL)
+                                    {
+                                        page = HASP_demo_Plate_Page_Current.state as Number
+                                    }
                                     page = page - 1
                                     if (page < 0) { page = 11 }
                                     HASP_demo_Plate_Page_Current.sendCommand(page)
@@ -195,7 +202,11 @@ rule "HASP_DEMO CHANNEL TRIGGERED"
                                 if(jsonkey == "event" && jsonvalue == "SHORT")
                                 {
                                     logInfo("HASP_channel.rules", " Page: {} Button: {} pressed",  eventpage, eventbutton)
-                                    var Number page = HASP_demo_Plate_Page_Current.state as Number
+                                    var Number page = 0
+                                    if (HASP_demo_Plate_Page_Current.state !== NULL)
+                                    {
+                                        page = HASP_demo_Plate_Page_Current.state as Number
+                                    }
                                     page = page + 1
                                     if (page > 11) { page = 0 }
                                     HASP_demo_Plate_Page_Current.sendCommand(page)
