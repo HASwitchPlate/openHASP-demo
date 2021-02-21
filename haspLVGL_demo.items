@@ -22,7 +22,7 @@ Number HASP_demo_Plate_TFTWidth                 "HASP Demo Plate - TFT Width [%d
 Number HASP_demo_Plate_TFTHeight                "HASP Demo Plate - TFT Height [%d]"             {channel="mqtt:topic:haspLVGLDemo:HASP_demo_Plate_TFTHeight"}
 
 /* Demo page Items */
-Switch HASP_demo_Plate_P0B1                     "HASP Demo Plate P0B1 %s"
+Switch HASP_demo_Plate_P1B1                     "HASP Demo Plate P1B1 %s"
 
 /* Plate Command Items */
 Switch HASP_demo_Plate_Refresh                  "HASP Demo Plate Refresh"                       {expire="5s,command=OFF"}
