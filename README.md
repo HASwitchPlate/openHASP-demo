@@ -7,4 +7,4 @@ Once the files are loaded into openHAB, go to the webpage of your plate. Navigat
 
 Restart the plate and the demo page should load automatically to your device.
 
-More information can be found on the [wiki](https://haswitchplate.github.io/openHASP-docs/#example-1/) of openHASP. 
+More information can be found on the [openHASP documentation](https://haswitchplate.github.io/openHASP-docs/#example-1/). 
