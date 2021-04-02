@@ -1,17 +1,25 @@
 // change the host IP to your mqtt server below
-Bridge mqtt:broker:haspLVGLBroker "haspLVGLBroker" [ host="127.0.0.1", secure=false ]
+Bridge mqtt:broker:openHASPBroker "openHASPBroker" [ host="127.0.0.1", secure=false ]
 {
     Channels:
-        Type publishTrigger : HASP_demo_Plate_State_Event           [ stateTopic="hasp/demo_plate/state/+", separator="#" ]
+        Type publishTrigger : HASP_demo_Plate_State_Event           [ stateTopic="hasp/demo_plate/state/#", separator="#" ]
 }
 
-Thing mqtt:topic:haspLVGLDemo "Demo Plate" (mqtt:broker:haspLVGLBroker)@ "Demo Location"
+Thing mqtt:topic:openHASPDemo "Demo Plate" (mqtt:broker:openHASPBroker)@ "Demo Location"
 {
     Channels:
+        /* Plate Command Things */
+        Type number : HASP_demo_Plate_Backlight_Brightness          [ stateTopic="hasp/demo_plate/state/dim", commandTopic="hasp/demo_plate/command/dim" , formatBeforePublish="%.0f" ]
+        Type switch : HASP_demo_Plate_Reboot                        [ commandTopic="hasp/demo_plate/command/reboot" , postCommand=false ]
+        Type number : HASP_demo_Plate_Page_Current                  [ commandTopic="hasp/demo_plate/command/page", stateTopic="hasp/demo_plate/state/page", formatBeforePublish="%.0f" ]
+        Type string : HASP_demo_Plate_Command                       [ commandTopic="hasp/demo_plate/command" ]
+        Type string : HASP_demo_Plate_Command_CLEARPAGE             [ commandTopic="hasp/demo_plate/command/clearpage" ]
+        Type string : HASP_demo_Plate_Command_JSON                  [ commandTopic="hasp/demo_plate/command/json" ]
+        Type string : HASP_demo_Plate_Command_JSONL                 [ commandTopic="hasp/demo_plate/command/jsonl" , formatBeforePublish="%.0f" ]
+
         /* Plate Status Things */
         Type switch : HASP_demo_Plate_LWT                           [ stateTopic="hasp/demo_plate/LWT", transformationPattern="MAP:lwt.map"  ]
         Type string : HASP_demo_Plate_Idle                          [ stateTopic="hasp/demo_plate/state/idle" ]
-        Type string : HASP_demo_Plate_Status                        [ stateTopic="hasp/demo_plate/state/statusupdate", transformationPattern="JSONPATH:$.status" ]
         Type string : HASP_demo_Plate_ESPVersion                    [ stateTopic="hasp/demo_plate/state/statusupdate", transformationPattern="JSONPATH:$.version" ]
         Type number : HASP_demo_Plate_ESPUptime                     [ stateTopic="hasp/demo_plate/state/statusupdate", transformationPattern="JSONPATH:$.uptime" ]
         Type string : HASP_demo_Plate_SSID                          [ stateTopic="hasp/demo_plate/state/statusupdate", transformationPattern="JSONPATH:$.ssid" ]
@@ -19,19 +27,11 @@ Thing mqtt:topic:haspLVGLDemo "Demo Plate" (mqtt:broker:haspLVGLBroker)@ "Demo L
         Type string : HASP_demo_Plate_HaspIP                        [ stateTopic="hasp/demo_plate/state/statusupdate", transformationPattern="JSONPATH:$.ip" ]
         Type number : HASP_demo_Plate_HeapFree                      [ stateTopic="hasp/demo_plate/state/statusupdate", transformationPattern="JSONPATH:$.heapFree" ]
         Type number : HASP_demo_Plate_HeapFrag                      [ stateTopic="hasp/demo_plate/state/statusupdate", transformationPattern="JSONPATH:$.heapFrag" ]
-        Type string : HASP_demo_Plate_ESPCore                       [ stateTopic="hasp/demo_plate/state/statusupdate", transformationPattern="JSONPATH:$.espCore" ]
-        Type string : HASP_demo_Plate_ESPUpdate                     [ stateTopic="hasp/demo_plate/state/statusupdate", transformationPattern="JSONPATH:$.espCanUpdate" ]
+        Type string : HASP_demo_Plate_ESPCore                       [ stateTopic="hasp/demo_plate/state/statusupdate", transformationPattern="JSONPATH:$.core" ]
+        Type string : HASP_demo_Plate_ESPUpdate                     [ stateTopic="hasp/demo_plate/state/statusupdate", transformationPattern="JSONPATH:$.canUpdate" ]
         Type number : HASP_demo_Plate_Page                          [ stateTopic="hasp/demo_plate/state/statusupdate", transformationPattern="JSONPATH:$.page" ]
         Type number : HASP_demo_Plate_NumPages                      [ stateTopic="hasp/demo_plate/state/statusupdate", transformationPattern="JSONPATH:$.numPages" ]
         Type string : HASP_demo_Plate_TftDriver                     [ stateTopic="hasp/demo_plate/state/statusupdate", transformationPattern="JSONPATH:$.tftDriver" ]
         Type number : HASP_demo_Plate_TFTWidth                      [ stateTopic="hasp/demo_plate/state/statusupdate", transformationPattern="JSONPATH:$.tftWidth" ]
         Type number : HASP_demo_Plate_TFTHeight                     [ stateTopic="hasp/demo_plate/state/statusupdate", transformationPattern="JSONPATH:$.tftHeight" ]
-        /* Plate Command Things */
-        Type number : HASP_demo_Plate_Backlight_Brightness          [ stateTopic="hasp/demo_plate/state/dim", commandTopic="hasp/demo_plate/command/dim" , formatBeforePublish="%.0f" ]
-        Type switch : HASP_demo_Plate_Reboot                        [ commandTopic="hasp/demo_plate/command/reboot" , postCommand=false ]
-        Type number : HASP_demo_Plate_Page_Current                  [ commandTopic="hasp/demo_plate/command/page", stateTopic="hasp/demo_plate/command/page", formatBeforePublish="%.0f" ]
-        Type string : HASP_demo_Plate_Command                       [ commandTopic="hasp/demo_plate/command" ]
-        Type string : HASP_demo_Plate_Command_CLEARPAGE             [ commandTopic="hasp/demo_plate/command/clearpage" ]
-        Type string : HASP_demo_Plate_Command_JSON                  [ commandTopic="hasp/demo_plate/command/json" ]
-        Type string : HASP_demo_Plate_Command_JSONL                 [ commandTopic="hasp/demo_plate/command/jsonl" , formatBeforePublish="%.0f" ]
 }

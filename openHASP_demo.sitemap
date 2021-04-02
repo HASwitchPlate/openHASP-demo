@@ -1,11 +1,11 @@
-sitemap haspLVGL_demo label="haspLVGL Demo PLATE"
-{
+sitemap openHASP_demo label="openHASP Demo PLATE"
+{//
     Frame visibility=[HASP_demo_Plate_NumPages<=4] {
-        Switch item=HASP_demo_Plate_Page_Current mappings=[0="0", 1="1", 2="2", 3="3"]
+        Switch item=HASP_demo_Plate_Page_Current mappings=[1="1", 2="2", 3="3", 4="4"]
     }
 
     Frame visibility=[HASP_demo_Plate_NumPages>4]{
-        Switch item=HASP_demo_Plate_Page_Current mappings=[0="0", 1="1", 2="2", 3="3", 4="4", 5="5", 6="6", 7="7", 8="8", 9="9", 10="10", 11="11"]
+        Switch item=HASP_demo_Plate_Page_Current mappings=[1="1", 2="2", 3="3", 4="4", 5="5", 6="6", 7="7", 8="8", 9="9", 10="10", 11="11", 12="12"]
     }
 
     Frame{
@@ -33,12 +33,9 @@ sitemap haspLVGL_demo label="haspLVGL Demo PLATE"
     }
     Frame{
         Slider item=HASP_demo_Plate_Backlight_Brightness icon="heating-off" step=10
-        // Setpoint item=HASP_demo_Plate_Backlight_Brightness minValue=0 maxValue=100 step=10
-        // Text item=HASP_demo_Plate_Backlight_Brightness
     }
-    Frame label="HASP LVGL GUI" {
+    Frame label="openHASP GUI" {
         Text label="Web GUI"{
-            // Insert IP address from the hasp Lvgl device below
             Webview url= "http://127.0.0.1/screenshot?" height=14
         }   
     }
