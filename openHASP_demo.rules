@@ -114,7 +114,7 @@ rule "HASP_DEMO CHANNEL TRIGGERED"
         logInfo("HASP_channel.rules", " Channel triggered: {} ",  receivedEvent)
 
         var topic = receivedEvent.toString.split("#").get(0)
-        var payload = receivedEvent.toString.split("#").get(1)
+        var payload = receivedEvent.substring(topic.length+1,receivedEvent.length)
         var topicvalue = topic.split("/").get(topic.split("/").size -1)
         var jsonkey = transform("JS","json_demo_key.js",payload)
         var jsonvalue = transform("JSONPATH", "$." + jsonkey, payload).toString.toUpperCase
