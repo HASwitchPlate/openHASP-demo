@@ -138,7 +138,7 @@ rule "HASP_DEMO CHANNEL TRIGGERED"
             case 'page':
             {
                 logInfo("HASP_channel.rules", " Page: {}",  payload)
-                postUpdate(HASP_test_Plate_Page_Current, payload)
+                postUpdate(HASP_demo_Plate_Page_Current, payload)
             }
             case 'input':
             {
